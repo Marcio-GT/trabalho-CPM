@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Sala de Aula A-Frame</title>
+
+<script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+
+</head>
+
+<body>
+
+<a-scene>
+
+
+<img src="/modelos/wooden_floor/textures/Mat_Floor_baseColor.png" id="piso">
+<img src="/modelos/alco_wall/textures/material0_baseColor.jpeg" id="alcol">
+<img src="/modelos/wall_e/textures/Material.003_normal.jpeg" id="robo">
+<img src="/modelos/need_some_space/scene.gltf" id="ceu">
+<img src="/modelos/school_board/textures/Material.005_baseColor.png" id="quadro">
+
+<!-- Piso -->
+
+<a-plane src="#piso" width="20" height="20" rotation="-90 0 0" position="0 0 0"></a-plane>
+
+
+
+<!-- Parede de trás (onde está o quadro) -->
+<a-box src="#robo" width="20" height="5" depth="0.1" position="0 2.5 -10"></a-box>
+
+<!-- Parede da frente -->
+<a-box color="black" width="20" height="5" depth="0.1" position="0 2.5 10"></a-box>
+
+<!-- Parede esquerda -->
+<a-box color="black" width="0.1" height="5" depth="20" position="-10 2.5 0"></a-box>
+
+<!-- Parede direita -->
+<a-box color="black" width="0.1" height="5" depth="20" position="10 2.5 0"></a-box>
+
+<!-- Quadro Preto -->
+
+<a-text 
+  value="Bem-vindos à sala de aula EUREKA" 
+  color="white" 
+  width="7.5" 
+  align="center" 
+  font="exo2bold"
+  position="0 2 -8.94">
+</a-text>
+
+
+<!--Mesas-->
+<!--Mesas-->
+<!--Mesas-->
+<a-entity id="mesas-cadeiras">
+
+  <!-- Primeira fileira (mais afastada do quadro) -->
+  <a-gltf-model src="modelos/school_desk/scene.gltf" position="-4 0 -3" scale="0.01 0.01 0.01" rotation="0 -40 0"></a-gltf-model>
+  <a-gltf-model src="modelos/school_desk/scene.gltf" position="0 0 -3"  scale="0.01 0.01 0.01" rotation="0 -40 0"></a-gltf-model>
+  <a-gltf-model src="modelos/school_desk/scene.gltf" position="4 0 -3"  scale="0.01 0.01 0.01" rotation="0 -40 0"></a-gltf-model>
+
+  <!-- Segunda fileira -->
+  <a-gltf-model src="modelos/school_desk/scene.gltf" position="-4 0 0" scale="0.01 0.01 0.01" rotation="0 -40 0"></a-gltf-model>
+  <a-gltf-model src="modelos/school_desk/scene.gltf" position="0 0 0"  scale="0.01 0.01 0.01" rotation="0 -40 0"></a-gltf-model>
+  <a-gltf-model src="modelos/school_desk/scene.gltf" position="4 0 0"  scale="0.01 0.01 0.01" rotation="0 -40 0"></a-gltf-model>
+
+  <!-- Terceira fileira -->
+  <a-gltf-model src="modelos/school_desk/scene.gltf" position="-4 0 3" scale="0.01 0.01 0.01" rotation="0 -40 0"></a-gltf-model>
+  <a-gltf-model src="modelos/school_desk/scene.gltf" position="0 0 3"  scale="0.01 0.01 0.01" rotation="0 -40 0"></a-gltf-model>
+  <a-gltf-model src="modelos/school_desk/scene.gltf" position="4 0 3"  scale="0.01 0.01 0.01" rotation="0 -40 0"></a-gltf-model>
+
+  <!-- Quarta fileira -->
+  <a-gltf-model src="modelos/school_desk/scene.gltf" position="-4 0 6" scale="0.01 0.01 0.01" rotation="0 -40 0"></a-gltf-model>
+  <a-gltf-model src="modelos/school_desk/scene.gltf" position="0 0 6"  scale="0.01 0.01 0.01" rotation="0 -40 0"></a-gltf-model>
+  <a-gltf-model src="modelos/school_desk/scene.gltf" position="4 0 6"  scale="0.01 0.01 0.01" rotation="0 -40 0"></a-gltf-model>
+
+</a-entity>
+
+
+<!-- Iluminação -->
+
+<a-light type="ambient" color="white"></a-light>
+
+<a-light type="point" intensity="0.8" position="0 5 0"></a-light>
+
+
+<!-- Camera -->
+
+<a-entity camera wasd-controls look-controls position="0 1.6 5"></a-entity>
+
+
+</a-scene>
+
+</body>
+
+</html>
